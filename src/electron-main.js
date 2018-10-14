@@ -1,7 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 const url = require('url')
-const FileExplorer = require('./core/file-explorer.js')
+const ReactSocket = require('./core/ReactSocket')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -20,10 +20,8 @@ function createWindow() {
 
     mainWindow.loadURL(startUrl)
 
-    ipcMain.on('seek', (event, msg) => {
-        fileExplorer = new FileExplorer(__dirname)
-        fileExplorer.read().then(dir => mainWindow.webContents.send('dirs', dir))
-    })
+    // init React communication
+    let rc = new ReactSocket(ipcMain, mainWindow.webContents)
 
     // Open the DevTools.
     mainWindow.webContents.openDevTools()

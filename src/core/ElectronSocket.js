@@ -5,14 +5,14 @@ class ElectronSocket {
         this._renderer = renderer
     }
 
-    get(resource) {
+    get(what) {
         let d = deferer()
 
-        this._renderer.on(resource, (event, data) => {
+        this._renderer.on(what.resource, (event, data) => {
             d.resolve(data)
         })
 
-        this._renderer.send('seek', resource)
+        this._renderer.send('seek', what)
         setTimeout(() => d.reject(), 15000)
 
         return d.promise

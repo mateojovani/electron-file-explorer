@@ -18,7 +18,7 @@ class FileExplorer extends Component {
         }
 
         let electronSock = new ElectronSocket(window.ipcRenderer)
-        electronSock.get('dirs').then((dirs) => {
+        electronSock.get({resource: 'dirs', path: __dirname}).then((dirs) => {
             this.setState({
                 'dirs': dirs
             })
