@@ -1,0 +1,26 @@
+.directory-list {
+    height: 100%;
+    background: #ecf0f1 !important;
+    padding-top: 40px !important;
+    overflow: auto;
+}
+
+.list-item {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+    color: #95a5a6
+}
+
+.item {
+    padding: 5px !important;
+    padding-left: 15px !important
+}
+
+.item:hover {
+    background: #e2eeee
+}
+
+.list-item:hover {
+    color: #95a5a6;
+}
