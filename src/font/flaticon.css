@@ -1,0 +1,161 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 22/06/2016 15:09
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+        /* font-size: 20px; */
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-3gp-file-black-interface-symbol:before { content: "\f100"; }
+.flaticon-3gp-file-rounded-rectangular-black-interface-symbol:before { content: "\f101"; }
+.flaticon-aac-file-black-interface-symbol:before { content: "\f102"; }
+.flaticon-aac-file-type-rounded-rectangular-solid-interface-symbol:before { content: "\f103"; }
+.flaticon-ai-design-document-black-interface-symbol:before { content: "\f104"; }
+.flaticon-ai-file-type-rounded-rectangular-solid-symbol:before { content: "\f105"; }
+.flaticon-aiff-file-black-rounded-rectangular-interface-symbol:before { content: "\f106"; }
+.flaticon-aiff-file-type-solid-black-interface-symbol:before { content: "\f107"; }
+.flaticon-app-document-black-interface-symbol:before { content: "\f108"; }
+.flaticon-app-file-black-rounded-rectangle-symbol:before { content: "\f109"; }
+.flaticon-asp-file-black-rounded-rectangle-interface-symbol:before { content: "\f10a"; }
+.flaticon-asp-file-type-solid-black-interface-symbol:before { content: "\f10b"; }
+.flaticon-avi-document-black-interface-symbol:before { content: "\f10c"; }
+.flaticon-avi-file-black-rounded-rectangular-interface-symbol:before { content: "\f10d"; }
+.flaticon-bmp-image-file-interface-symbol-of-black-rounded-rectangle:before { content: "\f10e"; }
+.flaticon-bmp-image-file-solid-interface-symbol:before { content: "\f10f"; }
+.flaticon-c-file-black-interface-symbol:before { content: "\f110"; }
+.flaticon-c-file-black-rounded-rectangle-interface-symbol:before { content: "\f111"; }
+.flaticon-cpp-document-black-interface-symbol:before { content: "\f112"; }
+.flaticon-cpp-file-rounded-rectangular-black-interface-symbol:before { content: "\f113"; }
+.flaticon-css-file-black-interface-symbol:before { content: "\f114"; }
+.flaticon-css-file-rounded-rectangular-black-interface-symbol:before { content: "\f115"; }
+.flaticon-dat-file-solid-black-interface-symbol:before { content: "\f116"; }
+.flaticon-dat-file-type-rounded-rectangular-black-interface-symbol:before { content: "\f117"; }
+.flaticon-dmg-document-black-interface-symbol:before { content: "\f118"; }
+.flaticon-dmg-file-black-rounded-rectangular-symbol-of-interface:before { content: "\f119"; }
+.flaticon-doc-document-file-black-interface-symbol:before { content: "\f11a"; }
+.flaticon-doc-file-type-rounded-black-rectangular-symbol-of-interface:before { content: "\f11b"; }
+.flaticon-docx-file-black-interface-symbol:before { content: "\f11c"; }
+.flaticon-docx-file-type-rounded-rectangular-black-solid-interface-symbol:before { content: "\f11d"; }
+.flaticon-dot-document-black-interface-symbol:before { content: "\f11e"; }
+.flaticon-dot-file-black-rounded-rectangular-interface-symbol:before { content: "\f11f"; }
+.flaticon-dotx-document-black-interface-symbol:before { content: "\f120"; }
+.flaticon-dotx-file-rounded-rectangular-solid-black-interface-symbol:before { content: "\f121"; }
+.flaticon-dwg-file-black-rounded-rectangular-interface-symbol:before { content: "\f122"; }
+.flaticon-dwg-file-format-solid-black-interface-symbol:before { content: "\f123"; }
+.flaticon-dxf-file-black-interface-symbol:before { content: "\f124"; }
+.flaticon-dxf-file-black-rounded-rectangular-interface-symbol:before { content: "\f125"; }
+.flaticon-eps-file-black-interface-symbol:before { content: "\f126"; }
+.flaticon-eps-file-type-rounded-rectangular-solid-interface-symbol:before { content: "\f127"; }
+.flaticon-exe-document-black-interface-symbol:before { content: "\f128"; }
+.flaticon-exe-file-black-rounded-rectangular-interface-symbol:before { content: "\f129"; }
+.flaticon-flv-file-type-black-interface-symbol:before { content: "\f12a"; }
+.flaticon-flv-file-type-black-rounded-rectangular-interface-symbol:before { content: "\f12b"; }
+.flaticon-gif-image-file-black-interface-symbol:before { content: "\f12c"; }
+.flaticon-gif-image-file-black-rounded-rectangular-interface-symbol:before { content: "\f12d"; }
+.flaticon-h-file-black-interface-symbol:before { content: "\f12e"; }
+.flaticon-h-file-type-rounded-black-rectangular-interface-symbol:before { content: "\f12f"; }
+.flaticon-html-document-black-interface-symbol:before { content: "\f130"; }
+.flaticon-html-file-rounded-rectangular-black-interface-symbol-of-web-pages:before { content: "\f131"; }
+.flaticon-ics-file-black-solid-interface-symbol:before { content: "\f132"; }
+.flaticon-ics-file-type-rounded-rectangular-black-symbol-of-interface:before { content: "\f133"; }
+.flaticon-iso-file-interface-symbol-of-black-rounded-rectangle:before { content: "\f134"; }
+.flaticon-iso-file-type-black-solid-interface-symbol:before { content: "\f135"; }
+.flaticon-java-black-file-interface-symbol:before { content: "\f136"; }
+.flaticon-java-rounded-rectangular-black-interface-symbol:before { content: "\f137"; }
+.flaticon-jpg-compressed-image-file-black-interface-symbol:before { content: "\f138"; }
+.flaticon-jpg-compressed-image-file-black-rounded-rectangular-interface-symbol:before { content: "\f139"; }
+.flaticon-key-black-file-type-interface-symbol:before { content: "\f13a"; }
+.flaticon-key-file-black-rounded-rectangle-interface-symbol:before { content: "\f13b"; }
+.flaticon-m4v-file-black-interface-symbol:before { content: "\f13c"; }
+.flaticon-m4v-file-type-rounded-black-rectangular-interface-symbol:before { content: "\f13d"; }
+.flaticon-mid-file-type-black-interface-symbol:before { content: "\f13e"; }
+.flaticon-mid-file-type-interface-symbol-of-black-rounded-rectangular-shape:before { content: "\f13f"; }
+.flaticon-mov-file-type-rounded-rectangular-solid-black-interface-symbol-of-movies:before { content: "\f140"; }
+.flaticon-mov-solid-black-interface-symbol-of-file-type:before { content: "\f141"; }
+.flaticon-mp3-compressed-music-file-interface-symbol-of-rounded-rectangular-black-shape:before { content: "\f142"; }
+.flaticon-mp3-file-type-black-interface-symbol:before { content: "\f143"; }
+.flaticon-mp4-file:before { content: "\f144"; }
+.flaticon-mp4-rounded-rectangular-black-interface-symbol:before { content: "\f145"; }
+.flaticon-mpg-file-solid-black-interface-symbol:before { content: "\f146"; }
+.flaticon-mpg-file-type-black-rounded-rectangular-interface-symbol:before { content: "\f147"; }
+.flaticon-num-file-type-black-solid-interface-symbol:before { content: "\f148"; }
+.flaticon-numbers-file-black-rectangular-interface-symbol:before { content: "\f149"; }
+.flaticon-odp-file-black-interface-symbol:before { content: "\f14a"; }
+.flaticon-odp-file-type-black-rounded-rectangle-interface-symbol:before { content: "\f14b"; }
+.flaticon-ods-file-black-interface-symbol:before { content: "\f14c"; }
+.flaticon-ods-file-rounded-black-rectangle-symbol:before { content: "\f14d"; }
+.flaticon-odt-file-black-interface-symbol:before { content: "\f14e"; }
+.flaticon-odt-file-black-rounded-rectangular-interface-symbol:before { content: "\f14f"; }
+.flaticon-ots-file-black-rounded-rectangular-interface-symbol:before { content: "\f150"; }
+.flaticon-ots-file-type-symbol:before { content: "\f151"; }
+.flaticon-ott-file-black-interface-symbol:before { content: "\f152"; }
+.flaticon-ott-file-type-rectangular-solid-symbol-of-interface:before { content: "\f153"; }
+.flaticon-pdf-file-black-rounded-rectangular-interface-symbol:before { content: "\f154"; }
+.flaticon-pdf-file-type-symbol:before { content: "\f155"; }
+.flaticon-pgs-black-interface-symbol:before { content: "\f156"; }
+.flaticon-pgs-file-rounded-rectangular-black-solid-interface-symbol:before { content: "\f157"; }
+.flaticon-php-file-black-rounded-rectangular-interface-symbol:before { content: "\f158"; }
+.flaticon-php-programmation-file-black-interface-symbol:before { content: "\f159"; }
+.flaticon-png-image-file-black-rounded-rectangular-interface-symbol:before { content: "\f15a"; }
+.flaticon-png-image-file-type-black-interface-symbol:before { content: "\f15b"; }
+.flaticon-pps-file-black-interface-symbol:before { content: "\f15c"; }
+.flaticon-pps-file-black-solid-rounded-rectangular-interface-symbol:before { content: "\f15d"; }
+.flaticon-ppt-file-solid-interface-symbol:before { content: "\f15e"; }
+.flaticon-ppt-file-type-rectangular-black-interface-symbol:before { content: "\f15f"; }
+.flaticon-psd-file-black-interface-symbol:before { content: "\f160"; }
+.flaticon-psd-file-type-black-rounded-rectangular-interface-symbol:before { content: "\f161"; }
+.flaticon-py-file-black-rounded-rectangular-interface-symbol:before { content: "\f162"; }
+.flaticon-py-file-solid-interface-symbol:before { content: "\f163"; }
+.flaticon-qt-file-black-interface-symbol:before { content: "\f164"; }
+.flaticon-qt-file-type-black-rounded-rectangular-interface-symbol:before { content: "\f165"; }
+.flaticon-rar-file-type:before { content: "\f166"; }
+.flaticon-rar-rounded-black-rectangular-interface-symbol:before { content: "\f167"; }
+.flaticon-rb-document-black-interface-symbol:before { content: "\f168"; }
+.flaticon-rb-file-type-rounded-rectangular-solid-interface-symbol:before { content: "\f169"; }
+.flaticon-rtf-document-black-interface-symbol:before { content: "\f16a"; }
+.flaticon-rtf-file-black-rounded-rectangular-interface-symbol:before { content: "\f16b"; }
+.flaticon-sql-document:before { content: "\f16c"; }
+.flaticon-sql-file-black-rounded-rectangular-interface-symbol:before { content: "\f16d"; }
+.flaticon-text-document-black-interface-symbol:before { content: "\f16e"; }
+.flaticon-text-file-black-symbol-of-rounded-rectangle:before { content: "\f16f"; }
+.flaticon-tga-file-rounded-rectangular-black-interface-symbol:before { content: "\f170"; }
+.flaticon-tgs-file-black-interface-symbol:before { content: "\f171"; }
+.flaticon-tgz-document-black-interface-symbol:before { content: "\f172"; }
+.flaticon-tgz-file-black-rounded-rectangular-interface-symbol:before { content: "\f173"; }
+.flaticon-tiff-high-quality-image-file-type-black-interface-symbol:before { content: "\f174"; }
+.flaticon-tiff-uncompressed-image-file-interface-symbol-of-rounded-rectangular-black-shape:before { content: "\f175"; }
+.flaticon-wav-file-type-black-interface-symbol:before { content: "\f176"; }
+.flaticon-wav-rounded-rectangular-solid-file-type-interface-symbol:before { content: "\f177"; }
+.flaticon-xls-black-file-interface-symbol:before { content: "\f178"; }
+.flaticon-xls-black-rounded-rectangular-interface-symbol:before { content: "\f179"; }
+.flaticon-xlsx-file-format-black-interface-symbol:before { content: "\f17a"; }
+.flaticon-xlsx-file-type-rectangular-solid-symbol:before { content: "\f17b"; }
+.flaticon-xml-document-black-interface-symbol:before { content: "\f17c"; }
+.flaticon-xml-file-black-rounded-rectangular-interface-symbol:before { content: "\f17d"; }
+.flaticon-yml-document-black-interface-symbol:before { content: "\f17e"; }
+.flaticon-yml-file-type-rectangular-symbol:before { content: "\f17f"; }
+.flaticon-zip-file-black-interface-symbol:before { content: "\f180"; }
+.flaticon-zip-file-rounded-rectangular-black-solid-interface-symbol:before { content: "\f181"; }

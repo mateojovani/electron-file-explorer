@@ -1,0 +1,28 @@
+.file-explorer {
+    height: 100%;
+    padding-top: 40px !important;
+    overflow: auto;
+}
+
+.file-icon {
+    display: block;
+    font-family: "Flaticon";
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 64px !important;
+}
+
+.folder-icon {
+    display: block !important;
+    text-align: center !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    font-size: 32px !important;
+}
+
+.card {
+    word-break: break-all;
+    width: 120px !important;
+    overflow: hidden;
+}

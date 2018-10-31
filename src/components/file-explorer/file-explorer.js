@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
 import ElectronSocket from '../../core/ElectronSocket'
+import { Segment, Icon, Card } from 'semantic-ui-react'
+import FileIcons from '../../core/file-icons'
+import '../../font/flaticon.css'
+import './file-explorer.css'
 
 const Dir = props => {
     return (
-        <div id={ props.key }>
-            { props.dirname }
-        </div>
+        <Card>
+            { props.isDir ? <Icon onClick={ (e) => props.handleDirClick(props.currentPath + props.dirname)() } className="folder-icon" name='folder' /> :
+                <span className="file-icon flaticon-bmp-image-file-solid-interface-symbol"></span> }
+            <Card.Content>
+                { props.dirname }
+            </Card.Content>
+        </Card>
     )
 }
 
@@ -16,25 +24,46 @@ class FileExplorer extends Component {
             'dirs': null
         }
 
+        this.electronSock = new ElectronSocket(window.ipcRenderer)
         this.getDirs()
     }
 
-    getDirs() {
-        let electronSock = new ElectronSocket(window.ipcRenderer)
-        electronSock.get({resource: 'dirs', path: this.props.view}).then((dirs) => {
-            this.setState({
-                'dirs': dirs
-            })
+    displayDirs(dirs) {
+        //sort folders first
+        dirs.sort((a, b) => {
+            return Number(b.isDir) - Number(a.isDir)
+        })
+
+        this.setState({
+            'dirs': dirs
         })
     }
 
-    render() {
-        this.getDirs()
+    getDirs() {
+        this.electronSock.get({resource: 'dirs', path: this.props.view}).then((dirs) => {
+            this.displayDirs(dirs)
+        })
+    }
 
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.view !== this.props.view){
+            this.props = nextProps
+            this.getDirs()
+        }
+    }
+
+    render() {
         return (
-            <div>
-                { this.state.dirs && this.state.dirs.map((dir, index) => <Dir key={index} dirname={dir}/>)}
-            </div>
+            <Segment vertical className='file-explorer'>
+                <Card.Group>
+                    {
+                        this.state.dirs &&
+                        this.state.dirs.map((dir, index) => {
+                            return <Dir currentPath={this.props.view} handleDirClick={this.props.handleDirClick} key={index} isDir={dir.isDir} icon={FileIcons.find(dir.dirname)} dirname={dir.dirname}/>
+                        })
+                    }
+                </Card.Group>
+            </Segment>
         )
     }
 }

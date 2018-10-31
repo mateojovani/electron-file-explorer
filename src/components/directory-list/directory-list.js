@@ -6,7 +6,7 @@ import FileIcons from '../../core/file-icons'
 
 const Dir = props => {
     return (
-        <a onClick={ props.handleClick.bind(this) } href='#' className='list-item'>
+        <a onClick={ props.handleClick } href='#' className='list-item'>
             <List.Item>
                 <Icon name={ props.icon } /> { props.dirname }
             </List.Item>
@@ -35,7 +35,7 @@ class DirectoryList extends Component {
             })
             .then((dirs) => {
                 dirs = dirs
-                    .filter(dir => dir[0] !== '.')
+                    .filter(dir => dir.dirname[0] !== '.' && dir.isDir)
 
                 this.setState({
                     'dirs': dirs
@@ -50,7 +50,7 @@ class DirectoryList extends Component {
                     {
                         this.state.dirs &&
                         this.state.dirs.map((dir, index) => {
-                            return <Dir handleClick={this.props.handleDirClick(this.state.homePath + dir)} key={index} icon={FileIcons.find(dir)} dirname={dir}/>
+                            return <Dir handleClick={this.props.handleDirClick(this.state.homePath + dir.dirname + "/")} key={index} icon={FileIcons.find(dir.dirname)} dirname={dir.dirname}/>
                         })
                     }
                 </List>

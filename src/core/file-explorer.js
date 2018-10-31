@@ -23,11 +23,24 @@ class FileExplorer {
             this._path = path
         else path = this._path
 
-        fs.readdir(path, (err, dir) => {
+        fs.readdir(path, (err, dirs) => {
             if (err)
                 d.reject(err)
-            else
-                d.resolve(dir)
+            else {
+                dirs = dirs.map(dir =>
+                    fs.statSync(path + dir).isDirectory() ?
+                        {
+                            dirname: dir,
+                            isDir: true
+                        } :
+                        {
+                            dirname: dir,
+                            isDir: false
+                        }
+                )
+
+                d.resolve(dirs)
+            }
         })
 
         return d.promise

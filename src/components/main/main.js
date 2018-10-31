@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Grid } from 'semantic-ui-react'
+import ElectronSocket from '../../core/ElectronSocket'
 import DirectoryList from '../directory-list/directory-list'
 import FileExplorer from '../file-explorer/file-explorer'
 import 'semantic-ui-css/semantic.min.css'
@@ -13,16 +14,31 @@ class Main extends Component {
                 currentpath: '/'
             }
         }
+
+        this.getHomeDir()
+    }
+
+    setView(path = '/') {
+        this.setState({
+            fileExplorer: {
+                currentpath: path
+            }
+        })
+    }
+
+    getHomeDir() {
+        let homePath = '/'
+        let electronSock = new ElectronSocket(window.ipcRenderer)
+        electronSock
+            .get({resource: 'usr'})
+            .then((usr) => {
+                homePath = `/home/${usr}/`
+                this.setView(homePath)
+            })
     }
 
     handleDirClick(dir) {
-        return () => {
-            this.setState({
-                fileExplorer: {
-                    currentpath: dir
-                }
-            })
-        }
+        return () => this.setView(dir)
     }
 
     render() {
@@ -33,7 +49,7 @@ class Main extends Component {
                         <DirectoryList handleDirClick={this.handleDirClick}/>
                     </Grid.Column>
                     <Grid.Column width={12}>
-                        <FileExplorer view={this.state.fileExplorer.currentpath}/>
+                        <FileExplorer handleDirClick={this.handleDirClick} view={this.state.fileExplorer.currentpath}/>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

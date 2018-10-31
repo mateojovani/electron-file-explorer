@@ -25,7 +25,7 @@ function createWindow() {
     let rc = new ReactSocket(ipcMain, mainWindow.webContents, username)
 
     // Open the DevTools.
-    mainWindow.webContents.openDevTools()
+    // mainWindow.webContents.openDevTools()
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function () {
