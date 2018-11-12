@@ -29,12 +29,14 @@ class Main extends Component {
     getHomeDir() {
         let homePath = '/'
         let electronSock = new ElectronSocket(window.ipcRenderer)
-        electronSock
+        setTimeout(() => {
+            electronSock
             .get({resource: 'usr'})
             .then((usr) => {
                 homePath = `/home/${usr}/`
                 this.setView(homePath)
             })
+        }, 10)
     }
 
     handleDirClick(dir) {

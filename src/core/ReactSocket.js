@@ -37,7 +37,7 @@ class ReactSocket {
         // console.log(dialog.showMessageBox({message: JSON.stringify(data)}))
         let fileExplorer = new FileExplorer(data.path || __dirname)
         fileExplorer.read()
-            .then(dir => this.sendData(data.id, 'dirs', dir))
+            .then(dir => {console.log(dir); return this.sendData(data.id, 'dirs', dir)})
     }
 }
 

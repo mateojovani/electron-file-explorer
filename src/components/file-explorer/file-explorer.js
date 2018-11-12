@@ -8,8 +8,8 @@ import './file-explorer.css'
 const Dir = props => {
     return (
         <Card>
-            { props.isDir ? <Icon onClick={ (e) => props.handleDirClick(props.currentPath + props.dirname)() } className="folder-icon" name='folder' /> :
-                <span className="file-icon flaticon-bmp-image-file-solid-interface-symbol"></span> }
+            { props.isDir ? <Icon onDoubleClick={ props.handleDirClick } className="folder-icon" name='folder' /> :
+                <span className={ "file-icon " + FileIcons.getFileIcon(props.dirname) }></span> }
             <Card.Content>
                 { props.dirname }
             </Card.Content>
@@ -59,7 +59,7 @@ class FileExplorer extends Component {
                     {
                         this.state.dirs &&
                         this.state.dirs.map((dir, index) => {
-                            return <Dir currentPath={this.props.view} handleDirClick={this.props.handleDirClick} key={index} isDir={dir.isDir} icon={FileIcons.find(dir.dirname)} dirname={dir.dirname}/>
+                            return <Dir currentPath={this.props.view} handleDirClick={this.props.handleDirClick(this.props.view + dir.dirname + "/")} key={index} isDir={dir.isDir} icon={FileIcons.find(dir.dirname)} dirname={dir.dirname}/>
                         })
                     }
                 </Card.Group>

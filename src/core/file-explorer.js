@@ -27,8 +27,9 @@ class FileExplorer {
             if (err)
                 d.reject(err)
             else {
-                dirs = dirs.map(dir =>
-                    fs.statSync(path + dir).isDirectory() ?
+                dirs = dirs.map(dir => {
+                    try{
+                        return fs.statSync(path + dir).isDirectory() ?
                         {
                             dirname: dir,
                             isDir: true
@@ -37,7 +38,10 @@ class FileExplorer {
                             dirname: dir,
                             isDir: false
                         }
-                )
+                    }catch(err){
+                        return false
+                    }
+                })
 
                 d.resolve(dirs)
             }
