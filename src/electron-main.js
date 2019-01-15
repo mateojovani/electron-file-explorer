@@ -2,7 +2,6 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 const url = require('url')
 const ReactSocket = require('./core/ReactSocket')
-let username = require("os").userInfo().username
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -22,7 +21,7 @@ function createWindow() {
     mainWindow.loadURL(startUrl)
 
     // init React communication
-    let rc = new ReactSocket(ipcMain, mainWindow.webContents, username)
+    let rc = new ReactSocket(ipcMain, mainWindow.webContents)
 
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()

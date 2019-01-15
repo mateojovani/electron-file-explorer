@@ -1,11 +1,11 @@
 const deferer = require('deferred')
 const FileExplorer = require('./file-explorer.js')
+const os = require('os')
 
 class ReactSocket {
-    constructor(ipcMain, webContents, usr) {
+    constructor(ipcMain, webContents) {
         this._ipcMain = ipcMain
         this._webContents = webContents
-        this._usr = usr
         ipcMain.on('seek', this.handleSeek.bind(this))
     }
 
@@ -23,21 +23,19 @@ class ReactSocket {
     }
 
     sendData(to, key, data) {
-        // const {dialog} = require('electron')
-        // console.log(dialog.showMessageBox({message: to + " " + " " + key + " " + data}))
         this._webContents.send(`${key}-${to}`, data)
     }
 
     getUsr(data) {
-        this.sendData(data.id, 'usr', this._usr)
+        let username = os.userInfo().username
+        let userDir = os.type() == 'Linux' ?  `/home/${username}`: `C:\\Users\\${username}\\`
+        this.sendData(data.id, 'usr', userDir)
     }
 
     getDir(data) {
-        // const {dialog} = require('electron')
-        // console.log(dialog.showMessageBox({message: JSON.stringify(data)}))
         let fileExplorer = new FileExplorer(data.path || __dirname)
         fileExplorer.read()
-            .then(dir => {console.log(dir); return this.sendData(data.id, 'dirs', dir)})
+            .then(dir => this.sendData(data.id, 'dirs', dir))
     }
 }
 

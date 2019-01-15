@@ -29,9 +29,9 @@ class DirectoryList extends Component {
         let electronSock = new ElectronSocket(window.ipcRenderer)
         electronSock
             .get({resource: 'usr'})
-            .then((usr) => {
-                this.setState({homePath: `/home/${usr}/`})
-                return electronSock.get({resource: 'dirs', path: `/home/${usr}/`})
+            .then((homePath) => {
+                this.setState({homePath: homePath})
+                return electronSock.get({resource: 'dirs', path: homePath})
             })
             .then((dirs) => {
                 dirs = dirs
