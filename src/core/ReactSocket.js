@@ -28,7 +28,7 @@ class ReactSocket {
 
     getUsr(data) {
         let username = os.userInfo().username
-        let userDir = os.type() == 'Linux' ?  `/home/${username}`: `C:\\Users\\${username}\\`
+        let userDir = os.type() == 'Linux' ?  `/home/${username}/`: `C:\\Users\\${username}\\`
         this.sendData(data.id, 'usr', userDir)
     }
 
